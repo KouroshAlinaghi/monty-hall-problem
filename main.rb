@@ -17,7 +17,7 @@ end
 
   chosen_door = doors[rand(3)]
   showed_door = doors.select {|c| c!=chosen_door and !(c.has_car) }[rand(2)]
-  third_door = doors.select {|c| c!=chosen_door and c!=showed_door }
+  third_door = doors.select {|c| c!=chosen_door and c!=showed_door }.last
 
   if chosen_door.has_car
     @chosen += 1
